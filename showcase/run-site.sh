@@ -8,7 +8,11 @@ PORT=$((9100 + RANDOM % 800)); LOG=$SW/logs/$SLUG.log; mkdir -p $SW/logs
 log(){ echo "[$(date +%T)] $*" | tee -a $LOG; }
 cd "$DIR" || { log "no dir"; exit 1; }
 for f in .env.example $APP/.env.example; do [ -f $f ] && { cp -n $f $(dirname $f)/.env 2>/dev/null; cp -n $f $(dirname $f)/.env.local 2>/dev/null; }; done
-export NEXT_TELEMETRY_DISABLED=1 CI=1 BROWSER=none
+export NEXT_TELEMETRY_DISABLED=1 BROWSER=none
+# run dev servers without agent/CI markers so framework CLIs start normally
+for v in $(env | grep -oE '^(CLAUDE[A-Z_]*|CI)=' | tr -d '='); do unset $v; done
+[ -n "${EXTRA_ENV:-}" ] && export $EXTRA_ENV
+
 case $KIND in
   static) (python3 -m http.server $PORT --bind 127.0.0.1 >>$LOG 2>&1 & echo $! > /tmp/srv.$SLUG) ;;
   next|vite|astro)
@@ -22,6 +26,7 @@ case $KIND in
     (setsid $CMD >>$LOG 2>&1 & echo $! > /tmp/srv.$SLUG) ;;
   pnpm-next)
     log "pnpm install"; pnpm install --no-frozen-lockfile --config.confirmModulesPurge=false >>$LOG 2>&1
+    [ -n "${PRE:-}" ] && { log "pre: $PRE"; bash -c "$PRE" >>$LOG 2>&1; }
     cd $APP; [ -f .env.example ] && cp -n .env.example .env.local
     (setsid npx next dev -p $PORT -H 127.0.0.1 >>$LOG 2>&1 & echo $! > /tmp/srv.$SLUG) ;;
 esac
