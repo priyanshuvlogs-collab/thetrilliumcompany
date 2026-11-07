@@ -16,6 +16,11 @@ async function settle(page) {
   await page.waitForTimeout(600);
   await page.evaluate(() => window.scrollTo(0, 0));
   await page.waitForTimeout(900);
+  // click through cookie banners that our CSS rule doesn't catch
+  for (const label of [/^accept all$/i, /^accept( cookies)?$/i, /^got it$/i, /^i agree$/i, /^allow all$/i]) {
+    const b = page.getByRole('button', { name: label }).first();
+    if (await b.isVisible().catch(() => false)) { await b.click().catch(() => {}); await page.waitForTimeout(400); break; }
+  }
   // dismiss common cookie / popup overlays
   await page.addStyleTag({ content: `
     [id*="cookie" i],[class*="cookie" i],[id*="consent" i],[class*="consent" i],
