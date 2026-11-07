@@ -1,0 +1,130 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,650;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#f6f3ec;font-family:Inter,sans-serif;color:#14231f}
+.scene{position:absolute;inset:0;opacity:0}
+h1,h2{font-family:Fraunces,serif;font-weight:650;letter-spacing:-.02em;line-height:1.05}
+.bgglow{position:absolute;inset:0;background:radial-gradient(1000px 600px at 80% 20%,#dcefe9,transparent 60%),radial-gradient(800px 500px at 10% 90%,#f5e8cf,transparent 60%)}
+/* intro */
+#intro .c{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.mark{width:120px;height:120px;border-radius:32px;background:#127160;display:grid;place-items:center;margin-bottom:44px;box-shadow:0 30px 60px -25px rgba(10,74,63,.6)}
+.mark svg{width:64px;height:64px}
+#intro h1{font-size:120px}
+#intro p{font-size:34px;color:#56655f;margin-top:26px}
+#intro .by{font-size:20px;letter-spacing:.2em;text-transform:uppercase;color:#127160;font-weight:600;margin-top:46px}
+/* desktop */
+.browser{position:absolute;left:50%;top:70px;width:1440px;transform-origin:50% 0;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 50px 100px -40px rgba(10,74,63,.5),0 0 0 1px #e4ddd0}
+.bar{height:46px;background:#fbf9f4;border-bottom:1px solid #e4ddd0;display:flex;align-items:center;gap:8px;padding:0 18px}
+.bar i{width:12px;height:12px;border-radius:50%;background:#e4ddd0}
+.bar i:nth-child(1){background:#ff6058}.bar i:nth-child(2){background:#ffbd2e}.bar i:nth-child(3){background:#28c941}
+.url{margin-left:20px;flex:1;max-width:520px;height:28px;border-radius:8px;background:#fff;border:1px solid #e4ddd0;font-size:14px;color:#56655f;display:flex;align-items:center;padding:0 12px;gap:8px}
+iframe{border:0;display:block;background:#f6f3ec}
+#dframe{width:1440px;height:810px}
+.cap{position:absolute;left:120px;bottom:70px;background:#0a4a3f;color:#fff;border-radius:999px;padding:18px 32px 18px 22px;font-size:26px;font-weight:600;display:flex;align-items:center;gap:16px;box-shadow:0 20px 40px -15px rgba(0,0,0,.4)}
+.cap b{background:#7fd6bf;color:#0a4a3f;border-radius:999px;width:40px;height:40px;display:grid;place-items:center;font-size:18px}
+/* mobile */
+#mobile .left{position:absolute;left:200px;top:50%;transform:translateY(-50%);width:640px}
+#mobile .eyebrow{font-size:20px;letter-spacing:.18em;text-transform:uppercase;color:#127160;font-weight:600}
+#mobile h2{font-size:96px;margin:22px 0 28px}
+#mobile h2 em{font-style:italic;font-weight:500;color:#127160}
+#mobile p{font-size:30px;color:#56655f;line-height:1.5}
+.phone{position:absolute;right:300px;top:50%;width:426px;height:880px;margin-top:-440px;border-radius:64px;background:#14231f;padding:18px;box-shadow:0 60px 120px -40px rgba(10,74,63,.6)}
+.phone .scr{width:390px;height:844px;background:#f6f3ec;padding-top:46px;border-radius:48px;overflow:hidden;position:relative}
+.phone .notch{position:absolute;top:12px;left:50%;margin-left:-60px;width:120px;height:34px;border-radius:20px;background:#14231f;z-index:2}
+#mframe{width:390px;height:798px}
+/* outro */
+#outro{background:#0a4a3f;color:#fff}
+#outro .c{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+#outro h2{font-size:104px}
+#outro .link{margin-top:48px;font-size:38px;background:#fff;color:#0a4a3f;padding:22px 44px;border-radius:999px;font-weight:600}
+#outro p{margin-top:56px;font-size:26px;color:#a9cfc4}
+#outro .ring{position:absolute;width:900px;height:900px;border-radius:50%;border:140px solid rgba(255,255,255,.04);right:-300px;bottom:-400px}
+</style></head>
+<body>
+<svg width="0" height="0" style="position:absolute"><symbol id="n" viewBox="0 0 24 24"><path d="M6 19V5l12 14V5" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol></svg>
+
+<div class="scene" id="intro"><div class="bgglow"></div><div class="c">
+  <div class="mark" id="imark"><svg><use href="#n"/></svg></div>
+  <h1 id="ih">Northbank Advisory</h1>
+  <p id="ip">The Kadence demo, redesigned.</p>
+  <div class="by" id="iby">Concept by The Trillium Company</div>
+</div></div>
+
+<div class="scene" id="desktop"><div class="bgglow"></div>
+  <div class="browser" id="browser"><div class="bar"><i></i><i></i><i></i><div class="url">🔒 northbank-advisory-mockup.vercel.app</div></div>
+  <iframe id="dframe" src="index.html"></iframe></div>
+  <div class="cap" id="cap"><b id="capn">1</b><span id="capt"></span></div>
+</div>
+
+<div class="scene" id="mobile"><div class="bgglow"></div>
+  <div class="left" id="mleft"><div class="eyebrow">Responsive</div><h2>Built <em>mobile-first.</em></h2><p>Every section reflows cleanly down to a 390px phone, with no sideways scrolling.</p></div>
+  <div class="phone" id="phone"><div class="scr"><div class="notch"></div><iframe id="mframe" src="index.html"></iframe></div></div>
+</div>
+
+<div class="scene" id="outro"><div class="ring"></div><div class="c">
+  <h2 id="oh">See it live.</h2>
+  <div class="link" id="ol">northbank-advisory-mockup.vercel.app</div>
+  <p id="op">Designed &amp; built by The Trillium Company · hello@thetrilliumcompany.com</p>
+</div></div>
+
+<script>
+const $=id=>document.getElementById(id);
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const ease=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+const eo=x=>1-Math.pow(1-x,3);
+const prog=(t,a,b)=>clamp((t-a)/(b-a));
+const fade=(t,a,b,c,d)=>Math.min(prog(t,a,b), 1-prog(t,c,d)); // in a..b, out c..d
+function rise(el,t,a,dur=.8,dist=40){const p=eo(prog(t,a,a+dur));el.style.opacity=p;el.style.transform=`translateY(${(1-p)*dist}px)`}
+
+let dOff=[],mMax=0,ready=false;
+window.prepare=async()=>{
+  const css='.reveal{opacity:1!important;transform:none!important;transition:none!important}*{animation:none!important;transition:none!important;scroll-behavior:auto!important}::-webkit-scrollbar{display:none}';
+  for(const f of [$('dframe'),$('mframe')]){
+    const d=f.contentDocument;const s=d.createElement('style');s.textContent=css;d.head.appendChild(s);
+    await d.fonts.ready;
+  }
+  const d=$('dframe').contentDocument;const top=el=>d.querySelector(el).getBoundingClientRect().top+$('dframe').contentWindow.scrollY-78;
+  dOff=[0,top('#services .head')-50,top('#process')-30,top('#outcomes .reveal')-60,top('#faq')-40,top('#contact')-60];
+  const dm=$('dframe').contentDocument.documentElement; dOff=dOff.map(v=>Math.min(v,dm.scrollHeight-810));
+  const md=$('mframe').contentDocument.documentElement; mMax=md.scrollHeight-798;
+  ready=true;return {dOff,mMax};
+};
+const caps=['A calm, confident hero','Three scoped engagements','A clear three-step process','Outcomes, not jargon','Answers up front','A contact form that writes the email'];
+// desktop timeline: holds + moves
+const D0=4, segs=[]; {let t=D0; for(let i=0;i<6;i++){const hold=i==0?2.6:1.9; segs.push({i,from:t,to:t+hold}); t+=hold+ (i<5?1.4:0);} }
+const DEND=segs[5].to+0.6;
+const M0=DEND-0.4, MEND=M0+9.5, O0=MEND-0.4, TOTAL=O0+4.6;
+window.TOTAL=TOTAL;
+
+window.render=t=>{
+  // intro
+  const iop=1-prog(t,3.4,4.2); $('intro').style.opacity=iop;
+  const mk=eo(prog(t,.2,1.1)); $('imark').style.transform=`scale(${.6+.4*mk}) rotate(${(1-mk)*-12}deg)`; $('imark').style.opacity=mk;
+  rise($('ih'),t,.6); rise($('ip'),t,1.1); rise($('iby'),t,1.6,.8,20);
+  // desktop
+  const dop=fade(t,3.6,4.4,DEND-0.6,DEND+0.2); $('desktop').style.opacity=dop;
+  const zoomP=prog(t,3.6,DEND); const sc=.97+.06*ease(prog(t,3.6,5.2)) - .0*zoomP;
+  $('browser').style.transform=`translateX(-50%) translateY(${(1-eo(prog(t,3.6,4.8)))*80}px) scale(${sc})`;
+  let y=0,ci=0;
+  for(let k=0;k<segs.length;k++){const s=segs[k];
+    if(t>=s.from){y=dOff[k];ci=k}
+    if(k<segs.length-1&&t>s.to&&t<segs[k+1].from){y=dOff[k]+(dOff[k+1]-dOff[k])*ease(prog(t,s.to,segs[k+1].from));ci=k}
+  }
+  if(t<segs[0].from)y=0;
+  $('dframe').contentWindow.scrollTo(0,y);
+  const s=segs[ci]; const cp=fade(t,s.from+.15,s.from+.55,s.to-.05,s.to+.35);
+  $('cap').style.opacity=t<D0?0:cp; $('cap').style.transform=`translateY(${(1-cp)*20}px)`;
+  $('capn').textContent=ci+1; $('capt').textContent=caps[ci];
+  // mobile
+  $('mobile').style.opacity=fade(t,M0,M0+.8,MEND-.6,MEND+.2);
+  rise($('mleft'),t,M0+.3,1,50); $('mleft').style.transform+=' translateY(-50%)';
+  const pp=eo(prog(t,M0,M0+1.2)); $('phone').style.transform=`translateY(${(1-pp)*120}px) rotate(${(1-pp)*4}deg)`;
+  $('mframe').contentWindow.scrollTo(0,mMax*ease(prog(t,M0+1.6,MEND-1)));
+  // outro
+  $('outro').style.opacity=prog(t,O0,O0+.8);
+  rise($('oh'),t,O0+.4); rise($('ol'),t,O0+.9); rise($('op'),t,O0+1.4,.8,20);
+};
+</script>
+</body></html>
