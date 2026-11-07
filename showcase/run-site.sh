@@ -23,12 +23,12 @@ case $KIND in
       vite) CMD="npx vite --port $PORT --host 127.0.0.1 --strictPort" ;;
       astro) CMD="npx astro dev --port $PORT --host 127.0.0.1" ;;
     esac
-    (setsid $CMD >>$LOG 2>&1 & echo $! > /tmp/srv.$SLUG) ;;
+    (setsid bash -c "$CMD || $CMD" >>$LOG 2>&1 & echo $! > /tmp/srv.$SLUG) ;;
   pnpm-next)
     log "pnpm install"; pnpm install --no-frozen-lockfile --config.confirmModulesPurge=false >>$LOG 2>&1
     [ -n "${PRE:-}" ] && { log "pre: $PRE"; bash -c "$PRE" >>$LOG 2>&1; }
     cd $APP; [ -f .env.example ] && cp -n .env.example .env.local
-    (setsid npx next dev -p $PORT -H 127.0.0.1 >>$LOG 2>&1 & echo $! > /tmp/srv.$SLUG) ;;
+    (setsid bash -c "npx next dev -p $PORT -H 127.0.0.1 || npx next dev -p $PORT -H 127.0.0.1" >>$LOG 2>&1 & echo $! > /tmp/srv.$SLUG) ;;
 esac
 URL=http://127.0.0.1:$PORT/
 log "waiting for $URL"
