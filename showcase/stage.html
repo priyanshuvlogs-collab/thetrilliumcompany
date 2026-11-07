@@ -1,0 +1,187 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{overflow:hidden;font-family:Inter,sans-serif;background:var(--bg);color:var(--ink)}
+:root{--ink:#14211d;--muted:#5d6763;--bg:#f6f3ec}
+.layer{position:absolute;inset:0;opacity:0}
+.serif{font-family:Fraunces,Georgia,serif;font-weight:600;letter-spacing:-.02em;line-height:1.04}
+.glow{position:absolute;inset:0;background:radial-gradient(60% 50% at 85% 10%,var(--soft),transparent 70%),radial-gradient(50% 45% at 5% 95%,var(--soft2),transparent 70%)}
+.mark{border-radius:28%;background:var(--accent);display:grid;place-items:center;color:var(--on);font-family:Fraunces,serif;font-weight:600;box-shadow:0 30px 60px -25px var(--shadow)}
+.eyebrow{font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accentText)}
+.center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 8%}
+.browser{position:absolute;border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 50px 100px -40px var(--shadow),0 0 0 1px rgba(0,0,0,.07)}
+.bar{height:44px;background:#f7f6f3;border-bottom:1px solid #e6e3dc;display:flex;align-items:center;gap:8px;padding:0 18px}
+.bar i{width:12px;height:12px;border-radius:50%}
+.bar i:nth-child(1){background:#ff6058}.bar i:nth-child(2){background:#ffbd2e}.bar i:nth-child(3){background:#28c941}
+.url{margin-left:18px;width:460px;height:26px;border-radius:7px;background:#fff;border:1px solid #e6e3dc;font-size:13px;color:#777;display:flex;align-items:center;padding:0 12px;white-space:nowrap;overflow:hidden}
+.view{position:relative;overflow:hidden;background:#fff}
+.view img{position:absolute;left:0;top:0;display:block;will-change:transform}
+.phone{position:absolute;background:#121614;box-shadow:0 60px 120px -40px var(--shadow)}
+.phone .scr{position:absolute;overflow:hidden;background:#fff}
+.phone .scr img{position:absolute;left:0;top:0;width:100%}
+.phone .island{position:absolute;left:50%;transform:translateX(-50%);background:#121614;z-index:2}
+.phone .status{position:absolute;left:0;right:0;top:0;background:var(--pagebg);z-index:1}
+.cap{position:absolute;background:var(--deep);color:#fff;border-radius:999px;font-weight:600;display:flex;align-items:center;white-space:nowrap;box-shadow:0 20px 40px -15px rgba(0,0,0,.45)}
+.cap b{background:var(--accentLight);color:var(--deep);border-radius:999px;display:grid;place-items:center;flex:none}
+.cta{display:inline-block;background:var(--accent);color:var(--on);border-radius:999px;font-weight:700}
+.dark{background:var(--deep);color:#fff}
+.dark .sub{color:rgba(255,255,255,.72)}
+.ring{position:absolute;border-radius:50%;border:solid rgba(255,255,255,.05)}
+.sub{color:var(--muted)}
+</style></head>
+<body>
+<div id="root"></div>
+<script>
+const Q=new URLSearchParams(location.search); const FORMAT=Q.get('format')||'walk'; const SITE=Q.get('site');
+const DIMS={walk:[1920,1080],reel:[1080,1920],teaser:[1080,1080]}; const [W,H]=DIMS[FORMAT];
+document.documentElement.style.width=document.body.style.width=W+'px';document.documentElement.style.height=document.body.style.height=H+'px';
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x)), prog=(t,a,b)=>clamp((t-a)/(b-a));
+const ease=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2, eo=x=>1-Math.pow(1-x,3);
+const fade=(t,a,b,c,d)=>Math.min(prog(t,a,b),1-prog(t,c,d));
+const el=(tag,cls,parent,style)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(style)Object.assign(e.style,style);(parent||document.getElementById('root')).appendChild(e);return e};
+const txt=(e,s)=>{e.textContent=s;return e};
+function rise(e,t,a,dur=.8,dist=40,extra=''){const p=eo(prog(t,a,a+dur));e.style.opacity=p;e.style.transform=`translateY(${(1-p)*dist}px) ${extra}`}
+const short=(s,n)=>{s=(s||'').replace(/\s+/g,' ').trim();return s.length<=n?s:s.slice(0,n).replace(/\s+\S*$/,'')+'…'};
+function rgb(s){const m=s.match(/(\d+)\D+(\d+)\D+(\d+)/);return m?[+m[1],+m[2],+m[3]]:[18,113,96]}
+const mix=(a,b,t)=>a.map((v,i)=>Math.round(v+(b[i]-v)*t)), css=c=>`rgb(${c.join(',')})`;
+const lum=([r,g,b])=>{const f=v=>{v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)};return .2126*f(r)+.7152*f(g)+.0722*f(b)};
+
+let C, render=()=>{}; window.TOTAL=0;
+window.setup=async()=>{
+  C=await (await fetch(`sites/${SITE}/config.json`)).json();
+  const a=rgb(C.accent); const L=lum(a);
+  const deep=L>.18?mix(a,[14,14,14],.84):mix(a,[8,10,9],.35);
+  const R=document.documentElement.style;
+  R.setProperty('--accent',css(a)); R.setProperty('--on',L>.45?'#111':'#fff');
+  R.setProperty('--accentText',css(L>.35?mix(a,[0,0,0],.45):a));
+  R.setProperty('--accentLight',css(mix(a,[255,255,255],.55)));
+  R.setProperty('--deep',css(deep)); R.setProperty('--soft',css(mix(a,[255,255,255],.8)));
+  R.setProperty('--soft2',css(mix(a,[246,243,236],.9))); R.setProperty('--shadow',`rgba(${mix(a,[0,0,0],.6).join(',')},.55)`);
+  const pb=rgb(C.bodyBg||''); R.setProperty('--pagebg',/rgba\(0, 0, 0, 0\)/.test(C.bodyBg)||!C.bodyBg?'#fff':C.bodyBg);
+  const brand=C.brand, tagline=short(C.h1&&C.h1.length>12?C.h1:(C.desc||C.h1),90);
+  const imgs=[]; const img=(p,src)=>{const i=el('img','',p);i.src=`sites/${SITE}/${src}`;imgs.push(i);return i};
+  // pick section stops: evenly spread headings
+  const pick=(secs,n)=>{if(secs.length<=n)return secs;const o=[];for(let i=0;i<n;i++)o.push(secs[Math.round(i*(secs.length-1)/(n-1))]);return o};
+  const host=C.domain||(()=>{try{const u=new URL(C.url);return /^(127\.0\.0\.1|localhost)$/.test(u.hostname)?'':u.hostname}catch{return ''}})();
+  const credit='Website & video by The Trillium Company';
+
+  if(FORMAT==='walk'){
+    const intro=el('div','layer');el('div','glow',intro);const ic=el('div','center',intro);
+    const mk=el('div','mark',ic,{width:'120px',height:'120px',fontSize:'64px',marginBottom:'44px'});txt(mk,brand.trim()[0].toUpperCase());
+    const ih=txt(el('div','serif',ic,{fontSize:brand.length>18?'96px':'120px'}),brand);
+    const ip=txt(el('div','sub',ic,{fontSize:'32px',marginTop:'26px',maxWidth:'1300px'}),tagline);
+    const ie=txt(el('div','eyebrow',ic,{fontSize:'20px',marginTop:'44px'}),'Website showcase');
+    const desk=el('div','layer');el('div','glow',desk);
+    const br=el('div','browser',desk,{left:'50%',top:'70px',width:'1440px',transformOrigin:'50% 0'});
+    const bar=el('div','bar',br);el('i','',bar);el('i','',bar);el('i','',bar);txt(el('div','url',bar),'🔒 '+(host||brand));
+    const view=el('div','view',br,{width:'1440px',height:'810px'});const dimg=img(view,'desktop.jpg');dimg.style.width='1440px';
+    const cap=el('div','cap',desk,{left:'110px',bottom:'64px',padding:'16px 30px 16px 18px',fontSize:'25px',gap:'16px'});const capn=el('b','',cap,{width:'40px',height:'40px',fontSize:'18px'});const capt=el('span','',cap);
+    const maxY=Math.max(0,C.desktop.height-810);
+    const secs=pick(C.desktop.sections,5);
+    const stops=[{y:0,text:short(C.h1||brand,44)||brand},...secs.map(s=>({y:clamp(s.y-110,0,maxY),text:short(s.text,44)}))];
+    if(stops.length<3){for(let i=1;i<=3;i++)stops.push({y:maxY*i/3,text:''})}
+    const segs=[];let tt=4;stops.forEach((s,i)=>{const hold=i==0?2.4:1.8;segs.push({...s,from:tt,to:tt+hold});tt+=hold+1.3});
+    const DEND=segs[segs.length-1].to+.5;
+    const mob=el('div','layer');el('div','glow',mob);
+    const ml=el('div','',mob,{position:'absolute',left:'190px',top:'50%',width:'700px'});
+    txt(el('div','eyebrow',ml,{fontSize:'20px'}),'Responsive');
+    txt(el('div','serif',ml,{fontSize:'92px',margin:'22px 0 28px'}),'Looks great on every phone.');
+    txt(el('div','sub',ml,{fontSize:'30px',lineHeight:1.5}),`${brand} reflows cleanly down to a 390px screen. No pinching, no sideways scrolling.`);
+    const ph=el('div','phone',mob,{right:'300px',top:'100px',width:'426px',height:'880px',borderRadius:'64px'});
+    const scr=el('div','scr',ph,{left:'18px',top:'18px',width:'390px',height:'844px',borderRadius:'48px'});
+    el('div','status',scr,{height:'46px'});el('div','island',scr,{top:'12px',width:'120px',height:'34px',borderRadius:'20px'});
+    const mimg=img(scr,'mobile.jpg');mimg.style.top='46px';const mMax=Math.max(0,C.mobile.height-798);
+    const M0=DEND-.4,MEND=M0+8,O0=MEND-.4;window.TOTAL=O0+4.4;
+    const out=el('div','layer dark');el('div','ring',out,{width:'900px',height:'900px',borderWidth:'140px',right:'-300px',bottom:'-420px'});
+    const oc=el('div','center',out);
+    const oe=txt(el('div','eyebrow',oc,{fontSize:'20px',color:'var(--accentLight)'}),'Now live');
+    const oh=txt(el('div','serif',oc,{fontSize:brand.length>18?'96px':'112px',marginTop:'22px'}),brand);
+    const ol=txt(el('div','cta',oc,{marginTop:'46px',fontSize:'34px',padding:'20px 42px'}),host||'Website showcase');
+    const op=txt(el('div','sub',oc,{marginTop:'54px',fontSize:'24px'}),credit+' · hello@thetrilliumcompany.com');
+    render=t=>{
+      intro.style.opacity=1-prog(t,3.3,4.1);
+      const k=eo(prog(t,.2,1.1));mk.style.opacity=k;mk.style.transform=`scale(${.6+.4*k}) rotate(${(1-k)*-12}deg)`;
+      rise(ih,t,.6);rise(ip,t,1.1);rise(ie,t,1.6,.8,20);
+      desk.style.opacity=fade(t,3.5,4.3,DEND-.6,DEND+.2);
+      br.style.transform=`translateX(-50%) translateY(${(1-eo(prog(t,3.5,4.7)))*80}px) scale(${.97+.06*ease(prog(t,3.5,5.1))})`;
+      let y=0,ci=0;for(let i=0;i<segs.length;i++){const s=segs[i];if(t>=s.from){y=s.y;ci=i}
+        if(i<segs.length-1&&t>s.to&&t<segs[i+1].from){y=s.y+(segs[i+1].y-s.y)*ease(prog(t,s.to,segs[i+1].from));ci=i}}
+      dimg.style.transform=`translateY(${-y}px)`;
+      const s=segs[ci],cp=s.text?fade(t,s.from+.15,s.from+.55,s.to-.05,s.to+.35):0;
+      cap.style.opacity=cp;cap.style.transform=`translateY(${(1-cp)*20}px)`;capn.textContent=ci+1;capt.textContent=s.text;
+      mob.style.opacity=fade(t,M0,M0+.8,MEND-.6,MEND+.2);
+      rise(ml,t,M0+.3,1,50,'translateY(-50%)');
+      const pp=eo(prog(t,M0,M0+1.2));ph.style.transform=`translateY(${(1-pp)*120}px) rotate(${(1-pp)*4}deg)`;
+      mimg.style.transform=`translateY(${-mMax*ease(prog(t,M0+1.4,MEND-.8))}px)`;
+      out.style.opacity=prog(t,O0,O0+.8);rise(oe,t,O0+.3,.8,20);rise(oh,t,O0+.5);rise(ol,t,O0+1);rise(op,t,O0+1.5,.8,20);
+    };
+  }
+
+  if(FORMAT==='reel'){
+    const bg=el('div','layer',null,{opacity:1});el('div','glow',bg);
+    const top=el('div','',bg,{position:'absolute',left:'80px',right:'80px',top:'120px',textAlign:'center'});
+    const te=txt(el('div','eyebrow',top,{fontSize:'26px'}),'New website');
+    const th=txt(el('div','serif',top,{fontSize:brand.length>16?'84px':'104px',marginTop:'18px'}),brand);
+    const ts=txt(el('div','sub',top,{fontSize:'32px',marginTop:'20px',lineHeight:1.35}),short(tagline,70));
+    const S=1.36;const ph=el('div','phone',bg,{left:'50%',top:'500px',width:426*S+'px',height:880*S+'px',borderRadius:64*S+'px'});
+    const scr=el('div','scr',ph,{left:18*S+'px',top:18*S+'px',width:390*S+'px',height:844*S+'px',borderRadius:48*S+'px'});
+    el('div','status',scr,{height:46*S+'px'});el('div','island',scr,{top:12*S+'px',width:120*S+'px',height:34*S+'px',borderRadius:20*S+'px'});
+    const mimg=img(scr,'mobile.jpg');mimg.style.top=46*S+'px';
+    const viewH=798; const mMax=Math.max(0,C.mobile.height-viewH);
+    const msecs=pick(C.mobile.sections,4);
+    const stops=[{y:0,text:short(C.h1||brand,30)},...msecs.map(s=>({y:clamp(s.y-90,0,mMax),text:short(s.text,30)}))];
+    const segs=[];let tt=2.6;stops.forEach((s,i)=>{const hold=i==0?1.8:1.5;segs.push({...s,from:tt,to:tt+hold});tt+=hold+1.1});
+    const SEND=segs[segs.length-1].to;
+    const cap=el('div','cap',bg,{left:'50%',top:'1730px',padding:'20px 38px 20px 22px',fontSize:'34px',gap:'18px',maxWidth:'960px'});const capn=el('b','',cap,{width:'50px',height:'50px',fontSize:'24px'});const capt=el('span','',cap);
+    const O0=SEND+.2;window.TOTAL=O0+3.8;
+    const out=el('div','layer dark');el('div','ring',out,{width:'1100px',height:'1100px',borderWidth:'160px',right:'-420px',bottom:'-380px'});
+    const oc=el('div','center',out);
+    const oh=txt(el('div','serif',oc,{fontSize:brand.length>16?'92px':'116px'}),brand);
+    const ol=txt(el('div','cta',oc,{marginTop:'60px',fontSize:'40px',padding:'26px 50px'}),host||'New website · live now');
+    const op=txt(el('div','sub',oc,{marginTop:'80px',fontSize:'28px',lineHeight:1.5}),credit);
+    render=t=>{
+      rise(te,t,.2,.7,24);rise(th,t,.45);rise(ts,t,.8,.8,24);
+      const pp=eo(prog(t,.9,2.1));ph.style.transform=`translateX(-50%) translateY(${(1-pp)*500}px)`;ph.style.opacity=pp;
+      let y=0,ci=0;for(let i=0;i<segs.length;i++){const s=segs[i];if(t>=s.from){y=s.y;ci=i}
+        if(i<segs.length-1&&t>s.to&&t<segs[i+1].from){y=s.y+(segs[i+1].y-s.y)*ease(prog(t,s.to,segs[i+1].from));ci=i}}
+      mimg.style.transform=`translateY(${-y*S}px)`;
+      const s=segs[ci],cp=s.text?fade(t,s.from+.1,s.from+.45,s.to-.05,s.to+.3):0;
+      cap.style.opacity=cp;cap.style.transform=`translateX(-50%) translateY(${(1-cp)*24}px)`;capn.textContent=ci+1;capt.textContent=s.text;
+      out.style.opacity=prog(t,O0,O0+.7);rise(oh,t,O0+.3);rise(ol,t,O0+.8);rise(op,t,O0+1.3,.8,20);
+    };
+  }
+
+  if(FORMAT==='teaser'){
+    const bg=el('div','layer',null,{opacity:1});el('div','glow',bg);
+    const top=el('div','',bg,{position:'absolute',left:'70px',right:'70px',top:'70px'});
+    const te=txt(el('div','eyebrow',top,{fontSize:'20px'}),'✦ New website · live now');
+    const th=txt(el('div','serif',top,{fontSize:brand.length>18?'64px':'80px',marginTop:'14px'}),brand);
+    const sc=.62;const br=el('div','browser',bg,{left:'70px',top:'300px',width:1440*sc+'px',borderRadius:'12px'});
+    const bar=el('div','bar',br,{height:'30px',padding:'0 12px',gap:'6px'});for(let i=0;i<3;i++)el('i','',bar,{width:'9px',height:'9px'});
+    const view=el('div','view',br,{width:1440*sc+'px',height:'700px'});const dimg=img(view,'desktop.jpg');dimg.style.width=1440*sc+'px';
+    const P=.78;const ph=el('div','phone',bg,{right:'54px',top:'440px',width:426*P+'px',height:880*P+'px',borderRadius:64*P+'px'});
+    const scr=el('div','scr',ph,{left:18*P+'px',top:18*P+'px',width:390*P+'px',height:844*P+'px',borderRadius:48*P+'px'});
+    el('div','status',scr,{height:46*P+'px'});el('div','island',scr,{top:12*P+'px',width:120*P+'px',height:34*P+'px',borderRadius:20*P+'px'});
+    const mimg=img(scr,'mobile.jpg');mimg.style.top=46*P+'px';
+    const dMax=Math.max(0,C.desktop.height*sc-700)*.45, mMax=Math.max(0,C.mobile.height-798)*.45;
+    window.TOTAL=12;
+    const out=el('div','layer dark');el('div','ring',out,{width:'800px',height:'800px',borderWidth:'120px',right:'-280px',bottom:'-300px'});
+    const oc=el('div','center',out);
+    const oh=txt(el('div','serif',oc,{fontSize:'78px'}),'Want a website like this?');
+    const ol=txt(el('div','cta',oc,{marginTop:'48px',fontSize:'32px',padding:'22px 44px'}),'hello@thetrilliumcompany.com');
+    const op=txt(el('div','sub',oc,{marginTop:'48px',fontSize:'24px'}),'The Trillium Company · websites & launch videos');
+    render=t=>{
+      rise(te,t,.15,.7,20);rise(th,t,.35);
+      const bp=eo(prog(t,.5,1.6));br.style.opacity=bp;br.style.transform=`translateY(${(1-bp)*80}px)`;
+      const pp=eo(prog(t,1.1,2.2));ph.style.opacity=pp;ph.style.transform=`translateY(${(1-pp)*160}px) rotate(${(1-pp)*6}deg)`;
+      const sp=ease(prog(t,2.4,8.4));dimg.style.transform=`translateY(${-dMax*sp}px)`;mimg.style.transform=`translateY(${-mMax*sp*P}px)`;
+      out.style.opacity=prog(t,8.6,9.3);rise(oh,t,8.9);rise(ol,t,9.4);rise(op,t,9.9,.8,20);
+    };
+  }
+  await Promise.all(imgs.map(i=>i.decode().catch(()=>{})));await document.fonts.ready;
+  window.render=render;return {total:window.TOTAL,brand};
+};
+</script>
+</body></html>
