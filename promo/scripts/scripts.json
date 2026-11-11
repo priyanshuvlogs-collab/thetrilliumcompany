@@ -1,0 +1,30 @@
+{
+ "blushpicnic": {
+  "brand": "Blush Picnic", "tagline": "Luxury picnics in Toronto & the GTA", "accent": "rgb(196,96,92)",
+  "domain": "blushpicnic.com", "ctaLabel": "Book your picnic",
+  "walk": [
+   {"kind": "hook", "say": "Planning a proposal, a birthday, or just a slow afternoon together?", "highlight": ["proposal", "birthday"]},
+   {"kind": "brand", "say": "Blush Picnic sets up luxury picnics anywhere in Toronto and the GTA."},
+   {"kind": "feature", "say": "Pick a package,", "title": "Pick a package.", "highlight": ["package."], "look": "Four ways to picnic"},
+   {"kind": "feature", "say": "choose your date,", "title": "Choose your date.", "highlight": ["date."], "look": "What are we celebrating"},
+   {"kind": "feature", "say": "and we deliver, style, and clean up.", "title": "We deliver, style & clean up.", "highlight": ["style"], "look": "Three steps"},
+   {"kind": "feature", "say": "You just show up.", "title": "You just show up.", "highlight": ["show", "up."], "look": "Find your look"},
+   {"kind": "stat", "say": "Packages start at two hundred and fifty dollars.", "stat": "$250", "statLabel": "Packages from"},
+   {"kind": "cta", "say": "Book your picnic at blushpicnic dot com.", "title": "Book your picnic", "highlight": ["picnic"]}
+  ],
+  "reel": [
+   {"kind": "hook", "say": "Luxury picnics in Toronto, styled and waiting for you.", "highlight": ["Luxury", "picnics"]},
+   {"kind": "feature", "say": "Proposals.", "title": "Proposals.", "highlight": ["Proposals."], "look": "What are we celebrating"},
+   {"kind": "feature", "say": "Birthdays.", "title": "Birthdays.", "highlight": ["Birthdays."], "look": "Signature Picnic"},
+   {"kind": "feature", "say": "Date nights.", "title": "Date nights.", "highlight": ["nights."], "look": "Proposal & Romance"},
+   {"kind": "feature", "say": "We set up, we clean up.", "title": "We set up. We clean up.", "highlight": ["clean"], "look": "Three steps"},
+   {"kind": "brand", "say": "You just show up."},
+   {"kind": "cta", "say": "Book now at blushpicnic dot com.", "title": "Book now", "highlight": ["now"]}
+  ],
+  "teaser": [
+   {"kind": "brand", "say": "This is the new website for Blush Picnic,"},
+   {"kind": "agency", "say": "designed and built by The Trillium Company."},
+   {"kind": "cta", "say": "Want one for your business? Let's talk.", "title": "Want one for your business?", "highlight": ["your", "business?"]}
+  ]
+ }
+}
