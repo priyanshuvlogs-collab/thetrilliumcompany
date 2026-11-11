@@ -29,10 +29,10 @@ export type SiteProps = {
   brand: string;
   tagline: string;
   accent: string; // "rgb(r,g,b)"
-  domain?: string;
+  domain?: string | null;
   ctaLabel: string;
   /** text on the CTA button; defaults to the domain */
-  ctaButton?: string;
+  ctaButton?: string | null;
   desktopH: number;
   mobileH: number;
   vo: string; // path in public/

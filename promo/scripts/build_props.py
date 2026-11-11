@@ -90,10 +90,9 @@ def main(scripts_path, slug, fmt):
         "desktopH": cap["desktop"]["height"], "mobileH": cap["mobile"]["height"],
         "vo": vo, "voDuration": round(total, 3), "music": data.get("music", "audio/music/upbeat.mp3"), "beats": out_beats,
     }
-    if fmt == "teaser":  # the square cut advertises the agency itself
-        props["ctaButton"] = "hello@thetrilliumcompany.com"
-    if props["domain"] is None:
-        del props["domain"]
+    # every key is written explicitly (null when unused): Remotion merges these props
+    # over the composition's defaultProps, so an omitted key would inherit the sample's value
+    props["ctaButton"] = "hello@thetrilliumcompany.com" if fmt == "teaser" else None  # teaser advertises the agency
     os.makedirs(f"{ROOT}/props", exist_ok=True)
     path = f"{ROOT}/props/{slug}-{fmt}.json"
     json.dump(props, open(path, "w"), indent=1)
