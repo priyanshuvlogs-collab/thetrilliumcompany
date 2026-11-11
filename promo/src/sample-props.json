@@ -1,0 +1,101 @@
+{
+ "slug": "blushpicnic",
+ "format": "walk",
+ "brand": "Blush Picnic",
+ "tagline": "Luxury picnics in Toronto & the GTA",
+ "accent": "rgb(196,96,92)",
+ "domain": "blushpicnic.com",
+ "ctaLabel": "Book your picnic",
+ "desktopH": 8214,
+ "mobileH": 7800,
+ "vo": "audio/blushpicnic/walk.mp3",
+ "voDuration": 21.969,
+ "music": "audio/music/upbeat.mp3",
+ "beats": [
+  {
+   "kind": "hook",
+   "say": "Planning a proposal, a birthday, or just a slow afternoon together?",
+   "highlight": [
+    "proposal",
+    "birthday"
+   ],
+   "from": 0.0,
+   "to": 4.556
+  },
+  {
+   "kind": "brand",
+   "say": "Blush Picnic sets up luxury picnics anywhere in Toronto and the GTA.",
+   "from": 4.556,
+   "to": 9.533,
+   "dy": 0,
+   "my": 0
+  },
+  {
+   "kind": "feature",
+   "say": "Pick a package,",
+   "title": "Pick a package.",
+   "highlight": [
+    "package."
+   ],
+   "from": 9.533,
+   "to": 10.713,
+   "dy": 1783.21875,
+   "my": 2300.0
+  },
+  {
+   "kind": "feature",
+   "say": "choose your date,",
+   "title": "Choose your date.",
+   "highlight": [
+    "date."
+   ],
+   "from": 10.713,
+   "to": 11.686,
+   "dy": 1450.21875,
+   "my": 1929.546875
+  },
+  {
+   "kind": "feature",
+   "say": "and we deliver, style, and clean up.",
+   "title": "We deliver, style & clean up.",
+   "highlight": [
+    "style"
+   ],
+   "from": 11.686,
+   "to": 14.502,
+   "dy": 3851.90625,
+   "my": 5167.765625
+  },
+  {
+   "kind": "feature",
+   "say": "You just show up.",
+   "title": "You just show up.",
+   "highlight": [
+    "show",
+    "up."
+   ],
+   "from": 14.502,
+   "to": 15.949,
+   "dy": 4726.171875,
+   "my": 6321.640625
+  },
+  {
+   "kind": "stat",
+   "say": "Packages start at two hundred and fifty dollars.",
+   "stat": "$250",
+   "statLabel": "Packages from",
+   "from": 15.949,
+   "to": 18.868
+  },
+  {
+   "kind": "cta",
+   "say": "Book your picnic at blushpicnic dot com.",
+   "title": "Book your picnic",
+   "highlight": [
+    "picnic"
+   ],
+   "from": 18.868,
+   "to": 21.969
+  }
+ ]
+}

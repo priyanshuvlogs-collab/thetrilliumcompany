@@ -43,10 +43,12 @@ def align(beats, vo):
     for c in chars[:-1]:
         acc += c
         target = lead + (total - lead) * acc / whole
-        cands = [g for g in gaps if g not in used and (not bounds or g > bounds[-1] + 0.4)]
+        floor = (bounds[-1] if bounds else 0.0) + 0.6  # every beat lasts at least 0.6s
+        cands = [g for g in gaps if g not in used and g > floor]
         g = min(cands, key=lambda x: abs(x - target)) if cands else target
         if abs(g - target) > 1.6:  # no pause nearby: cut at the proportional point
             g = target
+        g = max(g, floor)
         used.add(g)
         bounds.append(g)
     edges = [0.0] + bounds + [total]

@@ -219,7 +219,8 @@ const Words: React.FC<{
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
   const words = text.split(/\s+/);
-  const hl = highlight.map((h) => h.toLowerCase());
+  const norm = (w: string) => w.toLowerCase().replace(/[^\p{L}\p{N}$&']/gu, "");
+  const hl = highlight.map(norm);
   return (
     <div
       style={{
@@ -241,7 +242,7 @@ const Words: React.FC<{
       {words.map((w, i) => {
         const at = start + (i / Math.max(1, words.length)) * span;
         const s = spring({ frame: f - at, fps, config: { damping: 14, stiffness: 160, mass: 0.6 } });
-        const isHl = hl.includes(w.toLowerCase().replace(/[^a-z0-9$&']/g, ""));
+        const isHl = hl.includes(norm(w));
         const sweep = interpolate(f - at - 4, [0, 10], [0, 100], { ...clamp, easing: OUT });
         return (
           <span
@@ -458,7 +459,10 @@ const StatBeat: React.FC<BeatCtx> = ({ beat, props, pal, isLast }) => {
   const m = stat.match(/^(\D*)([\d,.]+)(.*)$/);
   const target = m ? parseFloat(m[2].replace(/,/g, "")) : 0;
   const p = interpolate(f, [4, 26], [0, 1], { ...clamp, easing: OUT });
-  const value = m ? `${m[1]}${Math.round(target * p).toLocaleString("en-US")}${m[3]}` : stat;
+  const decimals = m && m[2].includes(".") ? m[2].split(".")[1].length : 0;
+  const value = m
+    ? `${m[1]}${(target * p).toLocaleString("en-US", { minimumFractionDigits: decimals, maximumFractionDigits: decimals })}${m[3]}`
+    : stat;
   const size = props.format === "walk" ? 260 : props.format === "reel" ? 280 : 210;
   const pop = spring({ frame: f - 2, fps, config: { damping: 10, stiffness: 140 } });
   return (

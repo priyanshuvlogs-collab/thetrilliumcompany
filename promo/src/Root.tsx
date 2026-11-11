@@ -1,7 +1,7 @@
 import { CalculateMetadataFunction, Composition } from "remotion";
 import { Promo, promoDuration } from "./Promo";
 import { DIMS, FPS, Format, SiteProps } from "./types";
-import sample from "../props/blushpicnic-walk.json";
+import sample from "./sample-props.json";
 
 const meta: CalculateMetadataFunction<SiteProps> = ({ props }) => {
   const [width, height] = DIMS[props.format];

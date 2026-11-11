@@ -1,30 +1,2148 @@
 {
  "blushpicnic": {
-  "brand": "Blush Picnic", "tagline": "Luxury picnics in Toronto & the GTA", "accent": "rgb(196,96,92)",
-  "domain": "blushpicnic.com", "ctaLabel": "Book your picnic",
+  "brand": "Blush Picnic",
+  "tagline": "Luxury picnics in Toronto & the GTA",
+  "accent": "rgb(196,96,92)",
+  "domain": "blushpicnic.com",
+  "ctaLabel": "Book your picnic",
   "walk": [
-   {"kind": "hook", "say": "Planning a proposal, a birthday, or just a slow afternoon together?", "highlight": ["proposal", "birthday"]},
-   {"kind": "brand", "say": "Blush Picnic sets up luxury picnics anywhere in Toronto and the GTA."},
-   {"kind": "feature", "say": "Pick a package,", "title": "Pick a package.", "highlight": ["package."], "look": "Four ways to picnic"},
-   {"kind": "feature", "say": "choose your date,", "title": "Choose your date.", "highlight": ["date."], "look": "What are we celebrating"},
-   {"kind": "feature", "say": "and we deliver, style, and clean up.", "title": "We deliver, style & clean up.", "highlight": ["style"], "look": "Three steps"},
-   {"kind": "feature", "say": "You just show up.", "title": "You just show up.", "highlight": ["show", "up."], "look": "Find your look"},
-   {"kind": "stat", "say": "Packages start at two hundred and fifty dollars.", "stat": "$250", "statLabel": "Packages from"},
-   {"kind": "cta", "say": "Book your picnic at blushpicnic dot com.", "title": "Book your picnic", "highlight": ["picnic"]}
+   {
+    "kind": "hook",
+    "say": "Planning a proposal, a birthday, or just a slow afternoon together?",
+    "highlight": [
+     "proposal",
+     "birthday"
+    ]
+   },
+   {
+    "kind": "brand",
+    "say": "Blush Picnic sets up luxury picnics anywhere in Toronto and the GTA."
+   },
+   {
+    "kind": "feature",
+    "say": "Pick a package,",
+    "title": "Pick a package.",
+    "highlight": [
+     "package."
+    ],
+    "look": "Four ways to picnic"
+   },
+   {
+    "kind": "feature",
+    "say": "choose your date,",
+    "title": "Choose your date.",
+    "highlight": [
+     "date."
+    ],
+    "look": "What are we celebrating"
+   },
+   {
+    "kind": "feature",
+    "say": "and we deliver, style, and clean up.",
+    "title": "We deliver, style & clean up.",
+    "highlight": [
+     "style"
+    ],
+    "look": "Three steps"
+   },
+   {
+    "kind": "feature",
+    "say": "You just show up.",
+    "title": "You just show up.",
+    "highlight": [
+     "show",
+     "up."
+    ],
+    "look": "Find your look"
+   },
+   {
+    "kind": "stat",
+    "say": "Packages start at two hundred and fifty dollars.",
+    "stat": "$250",
+    "statLabel": "Packages from"
+   },
+   {
+    "kind": "cta",
+    "say": "Book your picnic at blushpicnic dot com.",
+    "title": "Book your picnic",
+    "highlight": [
+     "picnic"
+    ]
+   }
   ],
   "reel": [
-   {"kind": "hook", "say": "Luxury picnics in Toronto, styled and waiting for you.", "highlight": ["Luxury", "picnics"]},
-   {"kind": "feature", "say": "Proposals.", "title": "Proposals.", "highlight": ["Proposals."], "look": "What are we celebrating"},
-   {"kind": "feature", "say": "Birthdays.", "title": "Birthdays.", "highlight": ["Birthdays."], "look": "Signature Picnic"},
-   {"kind": "feature", "say": "Date nights.", "title": "Date nights.", "highlight": ["nights."], "look": "Proposal & Romance"},
-   {"kind": "feature", "say": "We set up, we clean up.", "title": "We set up. We clean up.", "highlight": ["clean"], "look": "Three steps"},
-   {"kind": "brand", "say": "You just show up."},
-   {"kind": "cta", "say": "Book now at blushpicnic dot com.", "title": "Book now", "highlight": ["now"]}
+   {
+    "kind": "hook",
+    "say": "Luxury picnics in Toronto, styled and waiting for you.",
+    "highlight": [
+     "Luxury",
+     "picnics"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Proposals.",
+    "title": "Proposals.",
+    "highlight": [
+     "Proposals."
+    ],
+    "look": "What are we celebrating"
+   },
+   {
+    "kind": "feature",
+    "say": "Birthdays.",
+    "title": "Birthdays.",
+    "highlight": [
+     "Birthdays."
+    ],
+    "look": "Signature Picnic"
+   },
+   {
+    "kind": "feature",
+    "say": "Date nights.",
+    "title": "Date nights.",
+    "highlight": [
+     "nights."
+    ],
+    "look": "Proposal & Romance"
+   },
+   {
+    "kind": "feature",
+    "say": "We set up, we clean up.",
+    "title": "We set up. We clean up.",
+    "highlight": [
+     "clean"
+    ],
+    "look": "Three steps"
+   },
+   {
+    "kind": "brand",
+    "say": "You just show up."
+   },
+   {
+    "kind": "cta",
+    "say": "Book now at blushpicnic dot com.",
+    "title": "Book now",
+    "highlight": [
+     "now"
+    ]
+   }
   ],
   "teaser": [
-   {"kind": "brand", "say": "This is the new website for Blush Picnic,"},
-   {"kind": "agency", "say": "designed and built by The Trillium Company."},
-   {"kind": "cta", "say": "Want one for your business? Let's talk.", "title": "Want one for your business?", "highlight": ["your", "business?"]}
+   {
+    "kind": "brand",
+    "say": "This is the new website for Blush Picnic,"
+   },
+   {
+    "kind": "agency",
+    "say": "designed and built by The Trillium Company."
+   },
+   {
+    "kind": "cta",
+    "say": "Want one for your business? Let's talk.",
+    "title": "Want one for your business?",
+    "highlight": [
+     "your",
+     "business?"
+    ]
+   }
+  ],
+  "voice": "YEENOUza6MPsbkc1De9E",
+  "music": "audio/music/upbeat.mp3"
+ },
+ "preserve-life-cpr": {
+  "brand": "Preserve Life CPR",
+  "tagline": "WSIB-approved first aid & CPR training, Ontario",
+  "domain": "preservelifecpr.com",
+  "ctaLabel": "Book your course",
+  "voice": "VOpMaaltMDRqwhpkfjBl",
+  "music": "audio/music/warm.mp3",
+  "walk": [
+   {
+    "kind": "hook",
+    "say": "Would you know what to do if someone collapsed in front of you?",
+    "highlight": [
+     "collapsed"
+    ]
+   },
+   {
+    "kind": "brand",
+    "say": "Preserve Life CPR makes first aid training simple, right here in Ontario."
+   },
+   {
+    "kind": "feature",
+    "say": "Start with eight hours online,",
+    "title": "8 hours online.",
+    "look": "Intermediate First Aid",
+    "highlight": [
+     "online."
+    ],
+    "sub": "Start with 8 hours online,"
+   },
+   {
+    "kind": "feature",
+    "say": "then finish with one hands-on day in class.",
+    "title": "Then one day in class.",
+    "look": "Training Programs",
+    "highlight": [
+     "class."
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "It's WSIB approved, and your certificate arrives as a PDF.",
+    "title": "WSIB-approved. PDF certificate.",
+    "look": "Free Emergency",
+    "highlight": [
+     "wsib-approved."
+    ]
+   },
+   {
+    "kind": "stat",
+    "say": "Enrol for one hundred thirty five dollars and sixty cents.",
+    "stat": "$135.60",
+    "statLabel": "Enrol for"
+   },
+   {
+    "kind": "cta",
+    "say": "Book your course at preservelifecpr dot com.",
+    "title": "Book your course",
+    "highlight": [
+     "course"
+    ],
+    "sub": "Book your course at preservelifecpr.com."
+   }
+  ],
+  "reel": [
+   {
+    "kind": "hook",
+    "say": "Learn CPR and first aid in Ontario.",
+    "highlight": [
+     "cpr"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Eight hours online.",
+    "title": "8 hours online.",
+    "look": "Intermediate First Aid",
+    "highlight": [
+     "online."
+    ],
+    "sub": "8 hours online."
+   },
+   {
+    "kind": "feature",
+    "say": "One day in class.",
+    "title": "1 day in class.",
+    "look": "Training Programs",
+    "highlight": [
+     "class."
+    ],
+    "sub": "1 day in class."
+   },
+   {
+    "kind": "feature",
+    "say": "WSIB approved.",
+    "title": "WSIB-approved.",
+    "look": "CPR Basics",
+    "highlight": [
+     "wsib-approved."
+    ]
+   },
+   {
+    "kind": "brand",
+    "say": "Preserve Life CPR."
+   },
+   {
+    "kind": "cta",
+    "say": "Book at preservelifecpr dot com.",
+    "title": "Book your course",
+    "highlight": [
+     "course"
+    ],
+    "sub": "Book at preservelifecpr.com."
+   }
+  ],
+  "teaser": [
+   {
+    "kind": "brand",
+    "say": "This is the new website for Preserve Life CPR,"
+   },
+   {
+    "kind": "agency",
+    "say": "designed and built by The Trillium Company."
+   },
+   {
+    "kind": "cta",
+    "say": "Want one for your business? Let's talk.",
+    "title": "Want one for your business?",
+    "highlight": [
+     "your",
+     "business?"
+    ]
+   }
+  ]
+ },
+ "actfirstsafety": {
+  "brand": "Aceis Group",
+  "tagline": "Workplace safety across Ontario since 2009",
+  "domain": "aceisgroup.com",
+  "ctaLabel": "Book a safety consult",
+  "voice": "VOpMaaltMDRqwhpkfjBl",
+  "music": "audio/music/warm.mp3",
+  "walk": [
+   {
+    "kind": "hook",
+    "say": "Industry without injury.",
+    "highlight": [
+     "injury."
+    ]
+   },
+   {
+    "kind": "brand",
+    "say": "Aceis Group has helped Ontario employers build safety systems since two thousand nine.",
+    "sub": "Aceis Group has helped Ontario employers build safety systems since 2009."
+   },
+   {
+    "kind": "feature",
+    "say": "First aid, WHMIS and fall protection training,",
+    "title": "Training people remember.",
+    "look": "Three ways Aceis",
+    "highlight": [
+     "remember."
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "inspections and safety systems that hold up,",
+    "title": "Inspections that hold up.",
+    "look": "A system you can see",
+    "highlight": [
+     "hold",
+     "up."
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "and road safety, from Hamilton to Ottawa.",
+    "title": "Hamilton to Ottawa.",
+    "look": "Hamilton to Ottawa",
+    "highlight": [
+     "ottawa."
+    ]
+   },
+   {
+    "kind": "cta",
+    "say": "Book a safety consult at aceisgroup dot com.",
+    "title": "Book a safety consult",
+    "highlight": [
+     "consult"
+    ],
+    "sub": "Book a safety consult at aceisgroup.com."
+   }
+  ],
+  "reel": [
+   {
+    "kind": "hook",
+    "say": "Keep your crew safe and working.",
+    "highlight": [
+     "safe"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Safety training.",
+    "title": "Safety training.",
+    "look": "Training people",
+    "highlight": [
+     "training."
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Site inspections.",
+    "title": "Site inspections.",
+    "look": "Inspections and OHS",
+    "highlight": [
+     "inspections."
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Road safety.",
+    "title": "Road safety.",
+    "look": "Road safety",
+    "highlight": [
+     "road"
+    ]
+   },
+   {
+    "kind": "brand",
+    "say": "Aceis Group. Industry without injury."
+   },
+   {
+    "kind": "cta",
+    "say": "Visit aceisgroup dot com.",
+    "title": "Book a safety consult",
+    "highlight": [
+     "consult"
+    ],
+    "sub": "Visit aceisgroup.com."
+   }
+  ],
+  "teaser": [
+   {
+    "kind": "brand",
+    "say": "This is the new website for Aceis Group,"
+   },
+   {
+    "kind": "agency",
+    "say": "designed and built by The Trillium Company."
+   },
+   {
+    "kind": "cta",
+    "say": "Want one for your business? Let's talk.",
+    "title": "Want one for your business?",
+    "highlight": [
+     "your",
+     "business?"
+    ]
+   }
+  ]
+ },
+ "hashmi-accounting": {
+  "brand": "Hashmi Accounting",
+  "tagline": "Bookkeeping, tax & payroll for small businesses",
+  "ctaLabel": "Book a call",
+  "voice": "VOpMaaltMDRqwhpkfjBl",
+  "music": "audio/music/warm.mp3",
+  "walk": [
+   {
+    "kind": "hook",
+    "say": "Dreading tax season again?",
+    "highlight": [
+     "tax",
+     "season"
+    ]
+   },
+   {
+    "kind": "brand",
+    "say": "Hashmi Accounting handles bookkeeping, tax returns and payroll for small businesses."
+   },
+   {
+    "kind": "feature",
+    "say": "We work inside the software you already use,",
+    "title": "Works with your software.",
+    "look": "We work inside",
+    "highlight": [
+     "software."
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "reconcile your books every month,",
+    "title": "Books reconciled monthly.",
+    "look": "How working with us",
+    "highlight": [
+     "monthly."
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "and keep your payroll on schedule.",
+    "title": "Payroll, on schedule.",
+    "look": "Payroll",
+    "highlight": [
+     "schedule."
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Fixed monthly fees, quoted before we start.",
+    "title": "Fixed monthly fees.",
+    "look": "One accountant",
+    "highlight": [
+     "fixed"
+    ]
+   },
+   {
+    "kind": "cta",
+    "say": "Book a short call with Hashmi Accounting.",
+    "title": "Book a short call",
+    "highlight": [
+     "call"
+    ]
+   }
+  ],
+  "reel": [
+   {
+    "kind": "hook",
+    "say": "Clean books. Calm tax season.",
+    "highlight": [
+     "calm"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Bookkeeping.",
+    "title": "Bookkeeping.",
+    "look": "Bookkeeping",
+    "highlight": [
+     "bookkeeping."
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Tax returns.",
+    "title": "Tax returns.",
+    "look": "Tax returns",
+    "highlight": [
+     "tax"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Payroll.",
+    "title": "Payroll.",
+    "look": "Payroll",
+    "highlight": [
+     "payroll."
+    ]
+   },
+   {
+    "kind": "brand",
+    "say": "Hashmi Accounting."
+   },
+   {
+    "kind": "cta",
+    "say": "Book a short call today.",
+    "title": "Book a short call",
+    "highlight": [
+     "call"
+    ]
+   }
+  ],
+  "teaser": [
+   {
+    "kind": "brand",
+    "say": "This is the new website for Hashmi Accounting,"
+   },
+   {
+    "kind": "agency",
+    "say": "designed and built by The Trillium Company."
+   },
+   {
+    "kind": "cta",
+    "say": "Want one for your business? Let's talk.",
+    "title": "Want one for your business?",
+    "highlight": [
+     "your",
+     "business?"
+    ]
+   }
+  ]
+ },
+ "cryptocurrency": {
+  "brand": "Indi Radio",
+  "tagline": "Live Punjabi radio from Surrey, Canada",
+  "ctaLabel": "Listen live",
+  "voice": "iLFuWmTNKH2CLzZOEhBG",
+  "music": "audio/music/upbeat.mp3",
+  "walk": [
+   {
+    "kind": "hook",
+    "say": "Looking for Punjabi radio that feels like home?",
+    "highlight": [
+     "punjabi",
+     "radio"
+    ]
+   },
+   {
+    "kind": "brand",
+    "say": "Indi Radio is live Punjabi radio from Surrey, British Columbia."
+   },
+   {
+    "kind": "feature",
+    "say": "Call in to the show with Indi Jaswal,",
+    "title": "Call in. Request a song.",
+    "look": "LATEST CLIPS",
+    "highlight": [
+     "request"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "hear Punjabi music and culture, twenty four seven,",
+    "title": "Punjabi music, 24/7.",
+    "look": "EVERYTHING ON",
+    "highlight": [
+     "24/7."
+    ],
+    "sub": "hear Punjabi music and culture, 24/7,"
+   },
+   {
+    "kind": "feature",
+    "say": "and it's free, heard worldwide.",
+    "title": "Free, worldwide.",
+    "look": "JOIN THE INDI",
+    "highlight": [
+     "free,"
+    ]
+   },
+   {
+    "kind": "cta",
+    "say": "Press play on Indi Radio.",
+    "title": "Listen live",
+    "highlight": [
+     "live"
+    ]
+   }
+  ],
+  "reel": [
+   {
+    "kind": "hook",
+    "say": "Live Punjabi radio from Surrey, Canada.",
+    "highlight": [
+     "punjabi"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Call-in shows.",
+    "title": "Call-in shows.",
+    "look": "LATEST",
+    "highlight": [
+     "call-in"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Music twenty four seven.",
+    "title": "Music 24/7.",
+    "look": "EVERYTHING",
+    "highlight": [
+     "24/7."
+    ],
+    "sub": "Music 24/7."
+   },
+   {
+    "kind": "feature",
+    "say": "Free to listen.",
+    "title": "Free to listen.",
+    "look": "JOIN",
+    "highlight": [
+     "free"
+    ]
+   },
+   {
+    "kind": "brand",
+    "say": "Indi Radio."
+   },
+   {
+    "kind": "cta",
+    "say": "Tune in now.",
+    "title": "Listen live",
+    "highlight": [
+     "live"
+    ]
+   }
+  ],
+  "teaser": [
+   {
+    "kind": "brand",
+    "say": "This is the new website for Indi Radio,"
+   },
+   {
+    "kind": "agency",
+    "say": "designed and built by The Trillium Company."
+   },
+   {
+    "kind": "cta",
+    "say": "Want one for your business? Let's talk.",
+    "title": "Want one for your business?",
+    "highlight": [
+     "your",
+     "business?"
+    ]
+   }
+  ]
+ },
+ "prinshi": {
+  "brand": "Prinshi Trades",
+  "tagline": "Premium heavyweight streetwear",
+  "ctaLabel": "See the drops",
+  "voice": "iLFuWmTNKH2CLzZOEhBG",
+  "music": "audio/music/upbeat.mp3",
+  "walk": [
+   {
+    "kind": "hook",
+    "say": "Heavyweight. Oversized. Built to last.",
+    "highlight": [
+     "heavyweight."
+    ]
+   },
+   {
+    "kind": "brand",
+    "say": "Prinshi Trades makes premium heavyweight streetwear."
+   },
+   {
+    "kind": "feature",
+    "say": "Four hundred GSM hoodies and oversized tees,",
+    "title": "400 GSM hoodies.",
+    "look": "CURRENT DROPS",
+    "highlight": [
+     "400"
+    ],
+    "sub": "400 GSM hoodies and oversized tees,"
+   },
+   {
+    "kind": "feature",
+    "say": "made in Ludhiana, India,",
+    "title": "Made in Ludhiana.",
+    "look": "Sample Hoodie 01",
+    "highlight": [
+     "ludhiana."
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "and founded in Toronto.",
+    "title": "Founded in Toronto.",
+    "look": "FAQ",
+    "highlight": [
+     "toronto."
+    ]
+   },
+   {
+    "kind": "cta",
+    "say": "Shop the latest drop.",
+    "title": "Shop the drop",
+    "highlight": [
+     "drop"
+    ]
+   }
+  ],
+  "reel": [
+   {
+    "kind": "hook",
+    "say": "Premium heavyweight streetwear.",
+    "highlight": [
+     "heavyweight"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Four hundred GSM.",
+    "title": "400 GSM.",
+    "look": "CURRENT",
+    "highlight": [
+     "400"
+    ],
+    "sub": "400 GSM."
+   },
+   {
+    "kind": "feature",
+    "say": "Oversized fits.",
+    "title": "Oversized fits.",
+    "look": "Sample Hoodie",
+    "highlight": [
+     "oversized"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Made in Ludhiana.",
+    "title": "Made in Ludhiana.",
+    "look": "Sample Drop 02",
+    "highlight": [
+     "ludhiana."
+    ]
+   },
+   {
+    "kind": "brand",
+    "say": "Prinshi Trades."
+   },
+   {
+    "kind": "cta",
+    "say": "Shop the drop.",
+    "title": "Shop the drop",
+    "highlight": [
+     "drop"
+    ]
+   }
+  ],
+  "teaser": [
+   {
+    "kind": "brand",
+    "say": "This is the new website for Prinshi Trades,"
+   },
+   {
+    "kind": "agency",
+    "say": "designed and built by The Trillium Company."
+   },
+   {
+    "kind": "cta",
+    "say": "Want one for your business? Let's talk.",
+    "title": "Want one for your business?",
+    "highlight": [
+     "your",
+     "business?"
+    ]
+   }
+  ]
+ },
+ "hustlebuddies": {
+  "brand": "Hustle Buddies",
+  "tagline": "AI-powered marketing for growing businesses",
+  "ctaLabel": "Book a free call",
+  "voice": "Whez8hBysHW6IVGRgjGA",
+  "music": "audio/music/tech.mp3",
+  "accent": "rgb(249,115,22)",
+  "walk": [
+   {
+    "kind": "hook",
+    "say": "Is marketing eating your whole week?",
+    "highlight": [
+     "whole",
+     "week?"
+    ]
+   },
+   {
+    "kind": "brand",
+    "say": "Hustle Buddies is an AI marketing agency for growing businesses."
+   },
+   {
+    "kind": "feature",
+    "say": "We create your content,",
+    "title": "AI content creation.",
+    "look": "AI Content Creation",
+    "highlight": [
+     "content"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "run smarter ad campaigns,",
+    "title": "Smarter paid ads.",
+    "look": "Paid Advertising",
+    "highlight": [
+     "ads."
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "and automate the work that slows you down.",
+    "title": "Marketing automation.",
+    "look": "Marketing Automation",
+    "highlight": [
+     "automation."
+    ]
+   },
+   {
+    "kind": "cta",
+    "say": "Book a free consultation with Hustle Buddies.",
+    "title": "Book a free consultation",
+    "highlight": [
+     "free"
+    ]
+   }
+  ],
+  "reel": [
+   {
+    "kind": "hook",
+    "say": "AI-powered marketing that helps you grow.",
+    "highlight": [
+     "ai-powered"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Content.",
+    "title": "Content.",
+    "look": "AI Content",
+    "highlight": [
+     "content."
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Paid ads.",
+    "title": "Paid ads.",
+    "look": "Paid Advertising",
+    "highlight": [
+     "ads."
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Automation.",
+    "title": "Automation.",
+    "look": "Marketing Automation",
+    "highlight": [
+     "automation."
+    ]
+   },
+   {
+    "kind": "brand",
+    "say": "Hustle Buddies."
+   },
+   {
+    "kind": "cta",
+    "say": "Book a free consultation.",
+    "title": "Book a free call",
+    "highlight": [
+     "free"
+    ]
+   }
+  ],
+  "teaser": [
+   {
+    "kind": "brand",
+    "say": "This is the new website for Hustle Buddies,"
+   },
+   {
+    "kind": "agency",
+    "say": "designed and built by The Trillium Company."
+   },
+   {
+    "kind": "cta",
+    "say": "Want one for your business? Let's talk.",
+    "title": "Want one for your business?",
+    "highlight": [
+     "your",
+     "business?"
+    ]
+   }
+  ]
+ },
+ "northbank": {
+  "brand": "Northbank Advisory",
+  "tagline": "Clear advice for growing teams",
+  "ctaLabel": "Book an intro call",
+  "voice": "VOpMaaltMDRqwhpkfjBl",
+  "music": "audio/music/warm.mp3",
+  "walk": [
+   {
+    "kind": "hook",
+    "say": "Starting a company is hard enough without the admin.",
+    "highlight": [
+     "admin."
+    ]
+   },
+   {
+    "kind": "brand",
+    "say": "Northbank Advisory gives founders clear advice, without the jargon."
+   },
+   {
+    "kind": "feature",
+    "say": "Set up your finances,",
+    "title": "Finance set-up.",
+    "look": "Finance set-up",
+    "highlight": [
+     "finance"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "make your first hires,",
+    "title": "First hires.",
+    "look": "First hires",
+    "highlight": [
+     "first"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "and build a weekly rhythm your team will keep.",
+    "title": "Operating rhythm.",
+    "look": "Operating rhythm",
+    "highlight": [
+     "rhythm."
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Every engagement has a fixed fee.",
+    "title": "Fixed fee. Written scope.",
+    "look": "Less admin",
+    "highlight": [
+     "fixed"
+    ]
+   },
+   {
+    "kind": "cta",
+    "say": "Book a free intro call.",
+    "title": "Book an intro call",
+    "highlight": [
+     "intro"
+    ]
+   }
+  ],
+  "reel": [
+   {
+    "kind": "hook",
+    "say": "Clear advice for growing teams.",
+    "highlight": [
+     "clear"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Finance.",
+    "title": "Finance.",
+    "look": "Finance set-up",
+    "highlight": [
+     "finance."
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "First hires.",
+    "title": "First hires.",
+    "look": "First hires",
+    "highlight": [
+     "hires."
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Operating rhythm.",
+    "title": "Operating rhythm.",
+    "look": "Operating rhythm",
+    "highlight": [
+     "rhythm."
+    ]
+   },
+   {
+    "kind": "brand",
+    "say": "Northbank Advisory."
+   },
+   {
+    "kind": "cta",
+    "say": "Book a free intro call.",
+    "title": "Book an intro call",
+    "highlight": [
+     "intro"
+    ]
+   }
+  ],
+  "teaser": [
+   {
+    "kind": "brand",
+    "say": "This is the new website for Northbank Advisory,"
+   },
+   {
+    "kind": "agency",
+    "say": "designed and built by The Trillium Company."
+   },
+   {
+    "kind": "cta",
+    "say": "Want one for your business? Let's talk.",
+    "title": "Want one for your business?",
+    "highlight": [
+     "your",
+     "business?"
+    ]
+   }
+  ]
+ },
+ "learnfrench": {
+  "brand": "Lumen Français",
+  "tagline": "Coach IA pour le TEF Canada et le TCF Canada",
+  "ctaLabel": "Commencer",
+  "voice": "TP9tTcKVBL2Minn2NS9E",
+  "teaser_voice": "YEENOUza6MPsbkc1De9E",
+  "music": "audio/music/warm.mp3",
+  "accent": "rgb(64,110,190)",
+  "walk": [
+   {
+    "kind": "hook",
+    "say": "Vous visez le NCLC 7 pour votre immigration ?",
+    "highlight": [
+     "nclc",
+     "7"
+    ]
+   },
+   {
+    "kind": "brand",
+    "say": "Lumen Français est un coach IA pour le TEF Canada et le TCF Canada."
+   },
+   {
+    "kind": "feature",
+    "say": "Il travaille les quatre compétences,",
+    "title": "Quatre compétences.",
+    "look": "Votre score officiel",
+    "highlight": [
+     "compétences."
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "parce que votre score officiel, c'est votre compétence la plus faible.",
+    "title": "Votre point faible compte.",
+    "look": "TEF Canada ou TCF",
+    "highlight": [
+     "faible"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Une stratégie différente pour le NCLC 5, 7 ou 8 à 9.",
+    "title": "NCLC 5, 7 ou 8–9.",
+    "look": "NCLC 5, 7",
+    "highlight": [
+     "nclc"
+    ],
+    "sub": "Une stratégie différente pour le NCLC 5, 7 ou 8–9."
+   },
+   {
+    "kind": "cta",
+    "say": "Commencez en trois minutes.",
+    "title": "Commencez aujourd'hui",
+    "highlight": [
+     "aujourd'hui"
+    ],
+    "sub": "Commencez en 3 minutes."
+   }
+  ],
+  "reel": [
+   {
+    "kind": "hook",
+    "say": "Préparez le TEF ou le TCF Canada.",
+    "highlight": [
+     "tef",
+     "tcf"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Quatre compétences.",
+    "title": "Quatre compétences.",
+    "look": "Quatre barres",
+    "highlight": [
+     "compétences."
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Votre niveau réel.",
+    "title": "Votre niveau réel.",
+    "look": "TEF Canada ou TCF",
+    "highlight": [
+     "réel."
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Une stratégie par NCLC.",
+    "title": "Une stratégie par NCLC.",
+    "look": "NCLC 5",
+    "highlight": [
+     "nclc."
+    ]
+   },
+   {
+    "kind": "brand",
+    "say": "Lumen Français."
+   },
+   {
+    "kind": "cta",
+    "say": "Commencez en trois minutes.",
+    "title": "Commencer",
+    "highlight": [
+     "commencer"
+    ],
+    "sub": "Commencez en 3 minutes."
+   }
+  ],
+  "teaser": [
+   {
+    "kind": "brand",
+    "say": "This is the new website for Lumen Français,"
+   },
+   {
+    "kind": "agency",
+    "say": "designed and built by The Trillium Company."
+   },
+   {
+    "kind": "cta",
+    "say": "Want one for your business? Let's talk.",
+    "title": "Want one for your business?",
+    "highlight": [
+     "your",
+     "business?"
+    ]
+   }
+  ]
+ },
+ "komal": {
+  "brand": "Signal Desk",
+  "tagline": "AI workflows for one-person brands",
+  "ctaLabel": "Find your starting point",
+  "voice": "Whez8hBysHW6IVGRgjGA",
+  "music": "audio/music/tech.mp3",
+  "walk": [
+   {
+    "kind": "hook",
+    "say": "Tired of AI prompts that go nowhere?",
+    "highlight": [
+     "nowhere?"
+    ]
+   },
+   {
+    "kind": "brand",
+    "say": "Signal Desk builds AI workflows for one-person brands."
+   },
+   {
+    "kind": "feature",
+    "say": "Playbooks you can actually follow,",
+    "title": "Playbooks you follow.",
+    "look": "Three playbooks",
+    "highlight": [
+     "follow."
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "an honest index of the tools worth paying for,",
+    "title": "An honest tool index.",
+    "look": "Tools we would",
+    "highlight": [
+     "honest"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "and small systems you can install in an afternoon.",
+    "title": "Install in an afternoon.",
+    "look": "Weekly Content Sprint",
+    "highlight": [
+     "afternoon."
+    ]
+   },
+   {
+    "kind": "cta",
+    "say": "Find your starting point at Signal Desk.",
+    "title": "Systems, not prompts.",
+    "highlight": [
+     "systems,"
+    ]
+   }
+  ],
+  "reel": [
+   {
+    "kind": "hook",
+    "say": "Systems, not prompts.",
+    "highlight": [
+     "systems,"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Playbooks.",
+    "title": "Playbooks.",
+    "look": "Three playbooks",
+    "highlight": [
+     "playbooks."
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Tool reviews.",
+    "title": "Tool reviews.",
+    "look": "Tools we would",
+    "highlight": [
+     "tool"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Content sprints.",
+    "title": "Content sprints.",
+    "look": "Weekly Content Sprint",
+    "highlight": [
+     "sprints."
+    ]
+   },
+   {
+    "kind": "brand",
+    "say": "Signal Desk."
+   },
+   {
+    "kind": "cta",
+    "say": "Find your starting point.",
+    "title": "Start here",
+    "highlight": [
+     "here"
+    ]
+   }
+  ],
+  "teaser": [
+   {
+    "kind": "brand",
+    "say": "This is the new website for Signal Desk,"
+   },
+   {
+    "kind": "agency",
+    "say": "designed and built by The Trillium Company."
+   },
+   {
+    "kind": "cta",
+    "say": "Want one for your business? Let's talk.",
+    "title": "Want one for your business?",
+    "highlight": [
+     "your",
+     "business?"
+    ]
+   }
+  ]
+ },
+ "sms": {
+  "brand": "NINE",
+  "tagline": "A full marketing workbench for $9 a month",
+  "ctaLabel": "Start 7-day trial",
+  "voice": "FLj50PrMa40MhGHappOt",
+  "music": "audio/music/tech.mp3",
+  "walk": [
+   {
+    "kind": "hook",
+    "say": "Paying ninety nine dollars a month for AI marketing tools?",
+    "highlight": [
+     "$99/mo"
+    ],
+    "title": "Paying $99/mo for AI tools?",
+    "sub": "Paying $99 a month for AI marketing tools?"
+   },
+   {
+    "kind": "brand",
+    "say": "NINE is a full marketing workbench for nine dollars a month.",
+    "sub": "NINE is a full marketing workbench for $9 a month."
+   },
+   {
+    "kind": "feature",
+    "say": "Brand voice and campaign kits,",
+    "title": "Brand voice & campaigns.",
+    "look": "Eight modules",
+    "highlight": [
+     "brand"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "ad copy and SEO briefs,",
+    "title": "Ads & SEO briefs.",
+    "look": "Ads Workshop",
+    "highlight": [
+     "seo"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "and client reports, all in one place.",
+    "title": "Eight modules. One brain.",
+    "look": "Straight answers",
+    "highlight": [
+     "one"
+    ]
+   },
+   {
+    "kind": "stat",
+    "say": "One plan. Nine dollars a month.",
+    "stat": "$9",
+    "statLabel": "Per month"
+   },
+   {
+    "kind": "cta",
+    "say": "Start your seven day trial.",
+    "title": "Start your trial",
+    "highlight": [
+     "trial"
+    ],
+    "sub": "Start your 7-day trial."
+   }
+  ],
+  "reel": [
+   {
+    "kind": "hook",
+    "say": "A full marketing workbench.",
+    "highlight": [
+     "workbench."
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Campaigns.",
+    "title": "Campaigns.",
+    "look": "Campaign Studio",
+    "highlight": [
+     "campaigns."
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "SEO briefs.",
+    "title": "SEO briefs.",
+    "look": "SEO Briefs",
+    "highlight": [
+     "seo"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Ads.",
+    "title": "Ads.",
+    "look": "Ads Workshop",
+    "highlight": [
+     "ads."
+    ]
+   },
+   {
+    "kind": "brand",
+    "say": "NINE. Nine dollars a month.",
+    "sub": "NINE. $9 a month."
+   },
+   {
+    "kind": "cta",
+    "say": "Start your seven day trial.",
+    "title": "Start your trial",
+    "highlight": [
+     "trial"
+    ],
+    "sub": "Start your 7-day trial."
+   }
+  ],
+  "teaser": [
+   {
+    "kind": "brand",
+    "say": "This is the new website for NINE,"
+   },
+   {
+    "kind": "agency",
+    "say": "designed and built by The Trillium Company."
+   },
+   {
+    "kind": "cta",
+    "say": "Want one for your business? Let's talk.",
+    "title": "Want one for your business?",
+    "highlight": [
+     "your",
+     "business?"
+    ]
+   }
+  ]
+ },
+ "replymaster": {
+  "brand": "ReplyMaster",
+  "tagline": "Reply to every customer, in your voice",
+  "ctaLabel": "Start for free",
+  "voice": "FLj50PrMa40MhGHappOt",
+  "music": "audio/music/tech.mp3",
+  "walk": [
+   {
+    "kind": "hook",
+    "say": "Another review waiting for a reply?",
+    "highlight": [
+     "review"
+    ]
+   },
+   {
+    "kind": "brand",
+    "say": "ReplyMaster helps you reply to every customer, everywhere, in your voice."
+   },
+   {
+    "kind": "feature",
+    "say": "Paste or import a message,",
+    "title": "Paste in a message.",
+    "look": "From mention to reply",
+    "highlight": [
+     "message."
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "pick a tone,",
+    "title": "Pick your tone.",
+    "look": "Everything you need",
+    "highlight": [
+     "tone."
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "and get an on-brand reply in seconds.",
+    "title": "On-brand in seconds.",
+    "look": "Simple, transparent pricing",
+    "highlight": [
+     "seconds."
+    ]
+   },
+   {
+    "kind": "cta",
+    "say": "Start for free with ReplyMaster.",
+    "title": "Start for free",
+    "highlight": [
+     "free"
+    ]
+   }
+  ],
+  "reel": [
+   {
+    "kind": "hook",
+    "say": "Reply to every customer, in your voice.",
+    "highlight": [
+     "every"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Reviews.",
+    "title": "Reviews.",
+    "look": "Everything you need",
+    "highlight": [
+     "reviews."
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Comments.",
+    "title": "Comments.",
+    "look": "From mention",
+    "highlight": [
+     "comments."
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Mentions.",
+    "title": "Mentions.",
+    "look": "Simple, transparent",
+    "highlight": [
+     "mentions."
+    ]
+   },
+   {
+    "kind": "brand",
+    "say": "ReplyMaster."
+   },
+   {
+    "kind": "cta",
+    "say": "Start for free.",
+    "title": "Start for free",
+    "highlight": [
+     "free"
+    ]
+   }
+  ],
+  "teaser": [
+   {
+    "kind": "brand",
+    "say": "This is the new website for ReplyMaster,"
+   },
+   {
+    "kind": "agency",
+    "say": "designed and built by The Trillium Company."
+   },
+   {
+    "kind": "cta",
+    "say": "Want one for your business? Let's talk.",
+    "title": "Want one for your business?",
+    "highlight": [
+     "your",
+     "business?"
+    ]
+   }
+  ]
+ },
+ "aiupdates": {
+  "brand": "AIupdates",
+  "tagline": "Everything in tech & AI, in one place",
+  "ctaLabel": "Read today's news",
+  "voice": "Whez8hBysHW6IVGRgjGA",
+  "music": "audio/music/tech.mp3",
+  "walk": [
+   {
+    "kind": "hook",
+    "say": "Too much AI news to keep up with?",
+    "highlight": [
+     "ai",
+     "news"
+    ]
+   },
+   {
+    "kind": "brand",
+    "say": "AIupdates puts everything happening in tech and AI in one place."
+   },
+   {
+    "kind": "feature",
+    "say": "A real-time news feed from the best sources,",
+    "title": "Real-time news feed.",
+    "look": "Real-time news feed",
+    "highlight": [
+     "real-time"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "a directory of the AI models that matter,",
+    "title": "AI model directory.",
+    "look": "Frontier labs",
+    "highlight": [
+     "directory."
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "and member deals on the tools you already pay for.",
+    "title": "Deals & coupons.",
+    "look": "Free to read",
+    "highlight": [
+     "deals"
+    ]
+   },
+   {
+    "kind": "cta",
+    "say": "Read today's news free at AIupdates.",
+    "title": "Read today's news",
+    "highlight": [
+     "news"
+    ]
+   }
+  ],
+  "reel": [
+   {
+    "kind": "hook",
+    "say": "Tech and AI news, in one place.",
+    "highlight": [
+     "ai"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Real-time news.",
+    "title": "Real-time news.",
+    "look": "Real-time news feed",
+    "highlight": [
+     "real-time"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Model directory.",
+    "title": "Model directory.",
+    "look": "Frontier labs",
+    "highlight": [
+     "directory."
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Deals and coupons.",
+    "title": "Deals & coupons.",
+    "look": "Deals & coupons",
+    "highlight": [
+     "deals"
+    ]
+   },
+   {
+    "kind": "brand",
+    "say": "AIupdates."
+   },
+   {
+    "kind": "cta",
+    "say": "Read today's news free.",
+    "title": "Read today's news",
+    "highlight": [
+     "news"
+    ]
+   }
+  ],
+  "teaser": [
+   {
+    "kind": "brand",
+    "say": "This is the new website for AIupdates,"
+   },
+   {
+    "kind": "agency",
+    "say": "designed and built by The Trillium Company."
+   },
+   {
+    "kind": "cta",
+    "say": "Want one for your business? Let's talk.",
+    "title": "Want one for your business?",
+    "highlight": [
+     "your",
+     "business?"
+    ]
+   }
+  ]
+ },
+ "clipper": {
+  "brand": "Pro Clipper",
+  "tagline": "Turn long videos into viral clips",
+  "ctaLabel": "Generate clips",
+  "voice": "Whez8hBysHW6IVGRgjGA",
+  "music": "audio/music/tech.mp3",
+  "walk": [
+   {
+    "kind": "hook",
+    "say": "Your best moments are buried in long videos.",
+    "highlight": [
+     "buried"
+    ]
+   },
+   {
+    "kind": "brand",
+    "say": "Pro Clipper turns long videos into viral clips."
+   },
+   {
+    "kind": "feature",
+    "say": "It transcribes Hindi and English,",
+    "title": "Hindi + English captions.",
+    "look": "Multilingual",
+    "highlight": [
+     "hindi"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "finds the moments people will watch,",
+    "title": "Finds the best moments.",
+    "highlight": [
+     "best"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "and renders vertical clips with captions burned in.",
+    "title": "Vertical, ready to post.",
+    "look": "Studio-grade",
+    "highlight": [
+     "vertical,"
+    ]
+   },
+   {
+    "kind": "cta",
+    "say": "Drop in a video and get your clips.",
+    "title": "Get your clips",
+    "highlight": [
+     "clips"
+    ]
+   }
+  ],
+  "reel": [
+   {
+    "kind": "hook",
+    "say": "Long video in. Viral clips out.",
+    "highlight": [
+     "viral"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Hindi and English.",
+    "title": "Hindi + English.",
+    "look": "Multilingual",
+    "highlight": [
+     "hindi"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Best moments found.",
+    "title": "Best moments found.",
+    "highlight": [
+     "best"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Vertical and captioned.",
+    "title": "Vertical. Captioned.",
+    "look": "Studio-grade",
+    "highlight": [
+     "captioned."
+    ]
+   },
+   {
+    "kind": "brand",
+    "say": "Pro Clipper."
+   },
+   {
+    "kind": "cta",
+    "say": "Get your clips today.",
+    "title": "Get your clips",
+    "highlight": [
+     "clips"
+    ]
+   }
+  ],
+  "teaser": [
+   {
+    "kind": "brand",
+    "say": "This is the new website for Pro Clipper,"
+   },
+   {
+    "kind": "agency",
+    "say": "designed and built by The Trillium Company."
+   },
+   {
+    "kind": "cta",
+    "say": "Want one for your business? Let's talk.",
+    "title": "Want one for your business?",
+    "highlight": [
+     "your",
+     "business?"
+    ]
+   }
+  ]
+ },
+ "facelesscut": {
+  "brand": "FacelessCut",
+  "tagline": "Faceless clips into clean YouTube cuts",
+  "ctaLabel": "Open the studio",
+  "voice": "Whez8hBysHW6IVGRgjGA",
+  "music": "audio/music/tech.mp3",
+  "walk": [
+   {
+    "kind": "hook",
+    "say": "Making YouTube videos without showing your face?",
+    "highlight": [
+     "face?"
+    ]
+   },
+   {
+    "kind": "brand",
+    "say": "FacelessCut turns a faceless clip into a clean YouTube cut."
+   },
+   {
+    "kind": "feature",
+    "say": "Upload your B-roll and voiceover,",
+    "title": "Upload your clip.",
+    "highlight": [
+     "upload"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "it takes out silences, fillers and repeats,",
+    "title": "Clean & split.",
+    "highlight": [
+     "clean"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "then adds a hook, chapters and captions.",
+    "title": "Hook, chapters, captions.",
+    "highlight": [
+     "hook,"
+    ]
+   },
+   {
+    "kind": "cta",
+    "say": "Open the studio and make your first cut.",
+    "title": "Open the studio",
+    "highlight": [
+     "studio"
+    ]
+   }
+  ],
+  "reel": [
+   {
+    "kind": "hook",
+    "say": "Faceless videos, cut clean.",
+    "highlight": [
+     "faceless"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Upload a clip.",
+    "title": "Upload a clip.",
+    "highlight": [
+     "upload"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Fillers removed.",
+    "title": "Fillers removed.",
+    "highlight": [
+     "removed."
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Hook and captions added.",
+    "title": "Hook + captions.",
+    "highlight": [
+     "hook"
+    ]
+   },
+   {
+    "kind": "brand",
+    "say": "FacelessCut."
+   },
+   {
+    "kind": "cta",
+    "say": "Open the studio.",
+    "title": "Open the studio",
+    "highlight": [
+     "studio"
+    ]
+   }
+  ],
+  "teaser": [
+   {
+    "kind": "brand",
+    "say": "This is the new website for FacelessCut,"
+   },
+   {
+    "kind": "agency",
+    "say": "designed and built by The Trillium Company."
+   },
+   {
+    "kind": "cta",
+    "say": "Want one for your business? Let's talk.",
+    "title": "Want one for your business?",
+    "highlight": [
+     "your",
+     "business?"
+    ]
+   }
+  ]
+ },
+ "high-ticket-system": {
+  "brand": "BookedAI",
+  "tagline": "Your AI appointment setter",
+  "ctaLabel": "Try the demo",
+  "voice": "Whez8hBysHW6IVGRgjGA",
+  "music": "audio/music/tech.mp3",
+  "walk": [
+   {
+    "kind": "hook",
+    "say": "Leads going cold before you call them back?",
+    "highlight": [
+     "cold"
+    ]
+   },
+   {
+    "kind": "brand",
+    "say": "BookedAI is an AI appointment setter for coaches and consultants."
+   },
+   {
+    "kind": "feature",
+    "say": "A lead fills in your form,",
+    "title": "A lead fills your form.",
+    "highlight": [
+     "form."
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "the agent replies in seconds and qualifies them,",
+    "title": "Replies in seconds.",
+    "highlight": [
+     "seconds."
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "and books the call on your calendar.",
+    "title": "Booked on your calendar.",
+    "highlight": [
+     "booked"
+    ]
+   },
+   {
+    "kind": "cta",
+    "say": "Try the demo and watch it work.",
+    "title": "Try the demo",
+    "highlight": [
+     "demo"
+    ]
+   }
+  ],
+  "reel": [
+   {
+    "kind": "hook",
+    "say": "Your AI appointment setter.",
+    "highlight": [
+     "ai"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Replies in seconds.",
+    "title": "Replies in seconds.",
+    "highlight": [
+     "seconds."
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Qualifies the lead.",
+    "title": "Qualifies the lead.",
+    "highlight": [
+     "qualifies"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Books the call.",
+    "title": "Books the call.",
+    "highlight": [
+     "books"
+    ]
+   },
+   {
+    "kind": "brand",
+    "say": "BookedAI."
+   },
+   {
+    "kind": "cta",
+    "say": "Try the demo.",
+    "title": "Try the demo",
+    "highlight": [
+     "demo"
+    ]
+   }
+  ],
+  "teaser": [
+   {
+    "kind": "brand",
+    "say": "This is the new website for BookedAI,"
+   },
+   {
+    "kind": "agency",
+    "say": "designed and built by The Trillium Company."
+   },
+   {
+    "kind": "cta",
+    "say": "Want one for your business? Let's talk.",
+    "title": "Want one for your business?",
+    "highlight": [
+     "your",
+     "business?"
+    ]
+   }
+  ]
+ },
+ "phantom-meme-bot": {
+  "brand": "Phantom Meme Bot",
+  "tagline": "Open-source Solana trading bot",
+  "ctaLabel": "Open the dashboard",
+  "voice": "Whez8hBysHW6IVGRgjGA",
+  "music": "audio/music/tech.mp3",
+  "walk": [
+   {
+    "kind": "hook",
+    "say": "Trading meme coins on Solana?",
+    "highlight": [
+     "solana?"
+    ]
+   },
+   {
+    "kind": "brand",
+    "say": "Phantom Meme Bot is an open-source trading bot for Solana."
+   },
+   {
+    "kind": "feature",
+    "say": "It routes trades through Jupiter,",
+    "title": "Jupiter routing.",
+    "highlight": [
+     "jupiter"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "runs a safety screen on every token,",
+    "title": "Token safety screen.",
+    "highlight": [
+     "safety"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "and starts in paper mode by default.",
+    "title": "Paper mode by default.",
+    "highlight": [
+     "paper"
+    ]
+   },
+   {
+    "kind": "cta",
+    "say": "Test your strategy in paper mode first.",
+    "title": "Start in paper mode",
+    "highlight": [
+     "paper"
+    ]
+   }
+  ],
+  "reel": [
+   {
+    "kind": "hook",
+    "say": "A Solana trading bot you can read.",
+    "highlight": [
+     "solana"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Jupiter routing.",
+    "title": "Jupiter routing.",
+    "highlight": [
+     "jupiter"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Token safety checks.",
+    "title": "Token safety checks.",
+    "highlight": [
+     "safety"
+    ]
+   },
+   {
+    "kind": "feature",
+    "say": "Paper mode first.",
+    "title": "Paper mode first.",
+    "highlight": [
+     "paper"
+    ]
+   },
+   {
+    "kind": "brand",
+    "say": "Phantom Meme Bot."
+   },
+   {
+    "kind": "cta",
+    "say": "Start in paper mode.",
+    "title": "Start in paper mode",
+    "highlight": [
+     "paper"
+    ]
+   }
+  ],
+  "teaser": [
+   {
+    "kind": "brand",
+    "say": "This is the new website for Phantom Meme Bot,"
+   },
+   {
+    "kind": "agency",
+    "say": "designed and built by The Trillium Company."
+   },
+   {
+    "kind": "cta",
+    "say": "Want one for your business? Let's talk.",
+    "title": "Want one for your business?",
+    "highlight": [
+     "your",
+     "business?"
+    ]
+   }
   ]
  }
 }

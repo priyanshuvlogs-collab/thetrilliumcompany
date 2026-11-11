@@ -1,54 +1,23 @@
-# Remotion video
+# Launch-ad video engine
 
-<p align="center">
-  <a href="https://github.com/remotion-dev/logo">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/remotion-dev/logo/raw/main/animated-logo-banner-dark.apng">
-      <img alt="Animated Remotion Logo" src="https://github.com/remotion-dev/logo/raw/main/animated-logo-banner-light.gif">
-    </picture>
-  </a>
-</p>
+Motion-graphics promo videos for client websites, built with Remotion. Each site gets:
 
-Welcome to your Remotion project!
+| Cut | Size | Use |
+|---|---|---|
+| Walkthrough | 1920×1080 | YouTube, website, client pitch |
+| Reel | 1080×1920 | Instagram Reels, TikTok, Shorts |
+| Teaser | 1080×1080 | Feed ad for The Trillium Company |
 
-## Commands
+Every cut has an ElevenLabs voiceover, a music bed ducked under the voice, sound effects on each cut, and burned-in subtitles timed to the speech.
 
-**Install Dependencies**
+## Pipeline
 
-```console
-npm i --loglevel=error
-```
+1. **Screenshots**: `../showcase/capture.js` grabs full-page desktop and mobile captures plus section positions.
+2. **Script**: add the site to `scripts/scripts.json` (or `scripts/add_scripts.py`): voice, music, and beats per format.
+3. **Audio**: generate each format's voiceover with ElevenLabs and save it as `public/audio/<slug>/<format>.mp3`.
+4. **Props**: `python3 scripts/build_props.py scripts/scripts.json <slug> <format>` uses ffmpeg `silencedetect` to time each beat to the pauses in the voiceover.
+5. **Render**: `scripts/render.sh <slug> <format>` renders with Remotion, then masters the audio to -14 LUFS / -1 dBTP with a two-pass ffmpeg `loudnorm`. `scripts/render_all.sh` does every site.
 
-**Start Preview**
+Client screenshots, audio, props and renders are gitignored. `public/sfx` and `public/fonts` are committed.
 
-```console
-npm run dev
-```
-
-**Render video**
-
-```console
-npx remotion render
-```
-
-**Upgrade Remotion**
-
-```console
-npx remotion upgrade
-```
-
-## Docs
-
-Get started with Remotion by reading the [fundamentals page](https://www.remotion.dev/docs/the-fundamentals).
-
-## Help
-
-We provide help on our [Discord server](https://discord.gg/6VzzNDwUwV).
-
-## Issues
-
-Found an issue with Remotion? [File an issue here](https://github.com/remotion-dev/remotion/issues/new).
-
-## License
-
-Note that for some entities a company license is needed. [Read the terms here](https://github.com/remotion-dev/remotion/blob/main/LICENSE.md).
+Preview in the Studio with `npx remotion studio`.
